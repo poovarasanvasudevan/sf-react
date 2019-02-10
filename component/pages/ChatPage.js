@@ -35,6 +35,8 @@ export default class ChatPage extends React.Component {
 
     _onMore = () => console.log('Shown more');
 
+    _onChat = () => this.props.navigation.navigate('Messages');
+
     render(): React.ReactNode {
         return (
             <Base>
@@ -55,6 +57,7 @@ export default class ChatPage extends React.Component {
                         title={item.title}
                         key={item.title}
                         description={item.subtitle}
+                        onPress={this._onChat}
                         left={props => <Avatar.Image style={styles.avatarPosition} {...props} size={38}
                                                      source={{uri: item.avatar}}/>
                         }

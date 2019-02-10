@@ -4,6 +4,7 @@ import LoginPage from "../pages/LoginPage";
 import HomePage from "../pages/HomePage";
 import ChatPage from "../pages/ChatPage";
 import CalendarPage from "../pages/CalendarPage";
+import MessagePage from "../pages/MessagePage";
 
 const AppNavigator = createStackNavigator({
     Splash: {
@@ -20,6 +21,9 @@ const AppNavigator = createStackNavigator({
     },
     Calendar : {
         screen : CalendarPage
+    },
+    Messages : {
+        screen : MessagePage
     }
 }, {
     initialRouteName: "Splash",
